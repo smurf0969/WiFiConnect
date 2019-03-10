@@ -1,0 +1,9 @@
+
+.vscode/arduino.json
+.vscode/c_cpp_properties.json
+Doxyfile*
+doxygen_sqlite3.db
+html
+images
+WiFiConnect.ino
+
