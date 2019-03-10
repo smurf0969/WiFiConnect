@@ -9,7 +9,7 @@ git:
   quiet: true
 env:
   global:
-     - ARDUINO_IDE_VERSION="1.8.8"
+     - ARDUINO_IDE_VERSION="1.8.7"
      - PRETTYNAME="WiFi Connect"
 # Optional, will default to "$TRAVIS_BUILD_DIR/Doxyfile"
 #    - DOXYFILE: $TRAVIS_BUILD_DIR/Doxyfile
@@ -18,7 +18,7 @@ before_install:
    - source <(curl -SLs https://raw.githubusercontent.com/smurf0969/travis-ci-arduino/master/install.sh)
 
 install:
-   - arduino --install-library "ArduinoJson","ESP8266_SSD1306"
+   - arduino --install-library "ArduinoJson","ESP8266 and ESP32 Oled Driver for SSD1306 display"
 
 script:
    - build_main_platforms
