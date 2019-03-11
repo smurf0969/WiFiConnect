@@ -12,6 +12,10 @@ I have also customised a version of ESP8266_SSD1306 version 4 available here htt
 If decide to use the origional library, please remove #define OLEDDISPLAYFONTS_h from the Robotto font file.
 The origional version is available at [ESP8266_SSD1306](https://github.com/squix78/esp8266-oled-ssd1306.git)
 
+# Documentation
+
+Further documentation can be found at [https://smurf0969.github.io/WiFiConnect/](https://smurf0969.github.io/WiFiConnect/)
+
 # IDE & Library Versions
 ### Arduino IDE
   - Arduino: 1.8.8
