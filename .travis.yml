@@ -1,3 +1,7 @@
+branches:
+    only:
+      - master
+      - /^v\d+\.\d+(\.\d+)?(-\S*)?$/
 language: c
 sudo: false
 cache:
