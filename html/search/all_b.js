@@ -1,17 +1,17 @@
 var searchData=
 [
-  ['resetsettings',['resetSettings',['../class_wi_fi_connect.html#a8d399598488499c2262960ed2056bb48',1,'WiFiConnect']]],
-  ['robo10',['robo10',['../_roboto___font_8h.html#a8672a2592d265fcb4b592df25cbefe3e',1,'Roboto_Font.h']]],
-  ['robo12',['robo12',['../_roboto___font_8h.html#afbe07753599c9ce5e6b417862aac6fec',1,'Roboto_Font.h']]],
-  ['robo14',['robo14',['../_roboto___font_8h.html#a82b693b7739390b476ec15604d9ecf18',1,'Roboto_Font.h']]],
-  ['robo16',['robo16',['../_roboto___font_8h.html#af5a52d5ba3dae0add99fcc17bfa39caa',1,'Roboto_Font.h']]],
-  ['robo24',['robo24',['../_roboto___font_8h.html#a97d89a4583f5b341238e47a33d0805dd',1,'Roboto_Font.h']]],
-  ['robo8',['robo8',['../_roboto___font_8h.html#a5bbffc52fe594291578cb3d4023ca00a',1,'Roboto_Font.h']]],
-  ['robo_5f10',['robo_10',['../_roboto___font_8h.html#acb415f7c317b7e8c9dcb5b3e4dfa04ba',1,'Roboto_Font.h']]],
-  ['robo_5f12',['robo_12',['../_roboto___font_8h.html#a056ab5b38bab087383bec6f88ea8e3a2',1,'Roboto_Font.h']]],
-  ['robo_5f14',['robo_14',['../_roboto___font_8h.html#ad6ddc178011fe3970791ec9e55ae04a3',1,'Roboto_Font.h']]],
-  ['robo_5f16',['robo_16',['../_roboto___font_8h.html#ab0b9add1cf60edaca2f90fa1c38bef6d',1,'Roboto_Font.h']]],
-  ['robo_5f24',['robo_24',['../_roboto___font_8h.html#a638a0766794ea6cc0756dc56624330ec',1,'Roboto_Font.h']]],
-  ['robo_5f8',['robo_8',['../_roboto___font_8h.html#a88aca626f3644c70c0a5b5e157d8ca27',1,'Roboto_Font.h']]],
-  ['roboto_5ffont_2eh',['Roboto_Font.h',['../_roboto___font_8h.html',1,'']]]
+  ['screentest',['screenTest',['../class_wi_fi_connect_o_l_e_d.html#ab0b8bebb3c5794b0521d97199b42ac3c',1,'WiFiConnectOLED']]],
+  ['setapcallback',['setAPCallback',['../class_wi_fi_connect.html#aa27fee8fce4b530e71810c60fcdb76c2',1,'WiFiConnect']]],
+  ['setapmodetimeoutmins',['setAPModeTimeoutMins',['../class_wi_fi_connect.html#af24b9e17924981fcba8f2abb07591b22',1,'WiFiConnect']]],
+  ['setapname',['setAPName',['../class_wi_fi_connect.html#a5e59f6e80beede0035141f0a70eaea77',1,'WiFiConnect']]],
+  ['setapstaticipconfig',['setAPStaticIPConfig',['../class_wi_fi_connect.html#a2310c6561870951de6aaded8b152fcaa',1,'WiFiConnect']]],
+  ['setconnectiontimeoutsecs',['setConnectionTimeoutSecs',['../class_wi_fi_connect.html#aa646e71f9e2a3f41a5006fa794210943',1,'WiFiConnect']]],
+  ['setdebug',['setDebug',['../class_wi_fi_connect.html#a7ade13593f515d48383c6d29c5c52710',1,'WiFiConnect']]],
+  ['setretryattempts',['setRetryAttempts',['../class_wi_fi_connect.html#aaeaddddefe2fc668c5f6136ace4abeb7',1,'WiFiConnect']]],
+  ['setsaveconfigcallback',['setSaveConfigCallback',['../class_wi_fi_connect.html#a0058723a8fc375e078cb7ca4e45af2f4',1,'WiFiConnect']]],
+  ['setstastaticipconfig',['setSTAStaticIPConfig',['../class_wi_fi_connect.html#a094e5500c7403e53783351fe995d2ea0',1,'WiFiConnect']]],
+  ['setvalue',['setValue',['../class_wi_fi_connect_param.html#ad14eefef7605075912c920b130aa3f15',1,'WiFiConnectParam']]],
+  ['startconfigurationportal',['startConfigurationPortal',['../class_wi_fi_connect.html#a030b2c79f770df680617a89da69e1391',1,'WiFiConnect::startConfigurationPortal()'],['../class_wi_fi_connect.html#ac6110b6afbf829bde36ca7de4792392b',1,'WiFiConnect::startConfigurationPortal(AP_Continue apcontinue)'],['../class_wi_fi_connect.html#a6e6816749026493f04ead1692e397113',1,'WiFiConnect::startConfigurationPortal(AP_Continue apcontinue, const char *apName, const char *apPassword=NULL)']]],
+  ['startparamsportal',['startParamsPortal',['../class_wi_fi_connect.html#a5aa5300978574c3a74dd7a25f2c6c593',1,'WiFiConnect::startParamsPortal()'],['../class_wi_fi_connect.html#a9a89dd5934ac3a05d306c791d094a333',1,'WiFiConnect::startParamsPortal(AP_Continue apcontinue)'],['../class_wi_fi_connect.html#ae431a3b0b024559dae0bb9538707dd6a',1,'WiFiConnect::startParamsPortal(AP_Continue apcontinue, const char *apName, const char *apPassword=NULL)']]],
+  ['statustostring',['statusToString',['../class_wi_fi_connect.html#a3fdde09f77d412637c9db543440ee9df',1,'WiFiConnect']]]
 ];
