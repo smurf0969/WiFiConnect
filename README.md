@@ -8,8 +8,8 @@ I created this project as I was finding that wifi managers were not fully suppor
 WiFiConnect can be used when no screen is needed and WiFiConnectOLED for feedback to the user via an OLED display.
 
 I'm using a customised font definition Roboto_Font.h that was generated with the help of the online tool [http://oleddisplay.squix.ch/]( http://oleddisplay.squix.ch/)
-I have also customised a version of ESP8266_SSD1306 version 4 available here https://github.com/smurf0969 to use my Roboto font by default and prevent the default font from being loaded into memory.
-If decide to use the origional library, please remove #define OLEDDISPLAYFONTS_h from the Robotto font file.
+I have also customised a version of ESP8266_SSD1306 version 4, available [here](https://github.com/smurf0969/esp8266-oled-ssd1306/tree/Allow-overriding-default-font) to use my Roboto font by default and prevent the default font from being loaded into memory.
+If you decide to use the origional library, please remove #define OLEDDISPLAYFONTS_h from the Robotto font file.
 The origional version is available at [ESP8266_SSD1306](https://github.com/squix78/esp8266-oled-ssd1306.git)
 
 # Documentation
