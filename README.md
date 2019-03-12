@@ -35,6 +35,6 @@ Many thanks to the authors and contibutors for the main libraries that made this
 * [ESP8266_SSD1306](https://github.com/squix78/esp8266-oled-ssd1306.git) for using a OLED Display
 * [http://oleddisplay.squix.ch/]( http://oleddisplay.squix.ch/) for generating font definitions
 * [WiFiManager](https://github.com/tzapu/WiFiManager) for the basis for this project
-* [ArduinoJson](https://github.com/bblanchon/ArduinoJson) for savinf configuration parameters
+* [ArduinoJson](https://github.com/bblanchon/ArduinoJson) for saving configuration parameters
 
 Stuart Blair (smurf0969)
