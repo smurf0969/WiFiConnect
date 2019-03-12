@@ -32,6 +32,8 @@
 #define WIFI_CONNECT_OLED
 #include <Arduino.h>
 #include "Roboto_Font.h" //include before oledisplay to use file from sketch folder
+#define OLEDDISPLAYFONTS_h
+#define OLEDDISPLAY_DEFAULTFONT Roboto_10
 #include "OLEDDisplay.h"
 #include "WiFiConnect.h"
 /**************************************************************************/
