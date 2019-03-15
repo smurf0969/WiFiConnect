@@ -127,12 +127,12 @@ void WiFiConnect::setAPModeTimeoutMins(int mins) {
 /**************************************************************************/
 void WiFiConnect::setAPName(const char *apName) {
   if(strlen(apName)>32){return;}
-  if (strlen(apName)==0||(apName == NULL || apName == "") && (_apName == NULL || apName == "")) {
+  if (strlen(apName)==0||(apName == NULL) && (_apName == NULL )) {
     String ssid = "ESP_" + String(ESP_getChipId());
     //_apName = ssid.c_str();
     strcpy(_apName,ssid.c_str());
 
-  } else if (apName != NULL && apName != "" && strlen(apName)>0) {
+  } else if (apName != NULL &&  strlen(apName)>0) {
    // _apName = apName;
     strcpy(_apName,apName);
   }
@@ -145,7 +145,7 @@ void WiFiConnect::setAPName(const char *apName) {
 */
 /**************************************************************************/
 const char* WiFiConnect::getAPName() {
-  if ((_apName == NULL || _apName == "") || strlen(_apName)==0) {
+  if ((_apName == NULL ) || strlen(_apName)==0) {
     setAPName(NULL);
   }
   return _apName;
@@ -175,7 +175,7 @@ void WiFiConnect::addParameter(WiFiConnectParam *p) {
 */
 /**************************************************************************/
 boolean WiFiConnect::startParamsPortal() {
-  startParamsPortal(AP_NONE, _apName, _apPassword);
+  return startParamsPortal(AP_NONE, _apName, _apPassword);
 }
 /**************************************************************************/
 /*!
@@ -192,7 +192,7 @@ boolean WiFiConnect::startParamsPortal() {
 */
 /**************************************************************************/
 boolean WiFiConnect::startParamsPortal(AP_Continue apcontinue) {
-  startParamsPortal(apcontinue, _apName, _apPassword);
+  return startParamsPortal(apcontinue, _apName, _apPassword);
 }
 /**************************************************************************/
 /*!
@@ -346,7 +346,7 @@ boolean WiFiConnect::startParamsPortal(AP_Continue apcontinue, const char  *apNa
 */
 /**************************************************************************/
 boolean WiFiConnect::startConfigurationPortal() {
-  startConfigurationPortal(AP_NONE, _apName, _apPassword);
+  return startConfigurationPortal(AP_NONE, _apName, _apPassword);
 }
 /**************************************************************************/
 /*!
@@ -364,7 +364,7 @@ boolean WiFiConnect::startConfigurationPortal() {
 */
 /**************************************************************************/
 boolean WiFiConnect::startConfigurationPortal(AP_Continue apcontinue) {
-  startConfigurationPortal(apcontinue, _apName, _apPassword);
+  return startConfigurationPortal(apcontinue, _apName, _apPassword);
 }
 /**************************************************************************/
 /*!
