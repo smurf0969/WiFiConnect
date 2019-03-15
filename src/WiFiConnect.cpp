@@ -321,6 +321,7 @@ boolean WiFiConnect::startParamsPortal(AP_Continue apcontinue, const char  *apNa
         }
         break;
       case AP_RESTART:
+      case AP_RESET:
         displayManualReset();
         DEBUG_WC(F("AP restart chip"));
         delay(1000);

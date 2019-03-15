@@ -6,6 +6,9 @@
    It contains a captive portal to allow easy connection and changing of WiFi netwoks
    via a web based interface and allows for additional user parameters.
 
+   You can view the project at <a href="https://github.com/smurf0969/WiFiConnect">https://github.com/smurf0969/WiFiConnect</a>.
+   Further information is also available in the project <a href="https://github.com/smurf0969/WiFiConnect/wiki">Wiki</a>.
+
    This is a heavily customised version from the origional <a href="https://github.com/tzapu/WiFiManager">WiFiManager</a>
    developed by https://github.com/tzapu .
 
@@ -47,7 +50,8 @@ extern "C" {
 enum AP_Continue {
   AP_NONE, ///< No action, continues to run code
   AP_LOOP, ///< Stalls execution with an infinate loop
-  AP_RESTART ///< Restarts the chip, allowing it to try to setup again. Handy for sensors when wifi is lost.
+  AP_RESTART, ///< Restarts the chip, allowing it to try to setup again. Handy for sensors when wifi is lost.
+  AP_RESET ///< Same as AP_RESTART
 };
 /**************************************************************************/
 /*!

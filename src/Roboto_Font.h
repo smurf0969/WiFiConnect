@@ -22,7 +22,7 @@
  */
 #define OLEDDISPLAYFONTS_h ///< Stops inclusion of default fonts to dave memory.
 
-#define Use_Roboto_10_as_Default true ///< Tells custom OLEDDisplay to use our Roboto_10 by default.
+#define OLEDDISPLAY_DEFAULTFONT Roboto_10 ///< Tells custom OLEDDisplay to use our Roboto_10 by default.
 
 /* Toggle fonts to be complied, only complie fonts that you use to conserve memory. */
 #define robo_24 true ///< Roboto 24px font

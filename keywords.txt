@@ -1,0 +1,44 @@
+#######################################
+# Syntax Coloring Map For WiFiConnect
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+
+WiFiConnect	KEYWORD1
+WiFiConnectOLED	KEYWORD1
+WiFiConnetparam KEYWORD1
+
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+startConfigurationPortal KEYWORD2
+startParamsPortal KEYWORD2
+addParameter KEYWORD2
+setAPName KEYWORD2
+getAPName  KEYWORD2
+resetSettings KEYWORD2
+autoConnect KEYWORD2
+setAPStaticIPConfig KEYWORD2
+setSTAStaticIPConfig KEYWORD2
+setAPCallback KEYWORD2
+setSaveConfigCallback KEYWORD2
+setDebug KEYWORD2
+setRetryAttempts KEYWORD2
+setConnectionTimeoutSecs KEYWORD2
+setAPModeTimeoutMins KEYWORD2
+statusToString KEYWORD2
+getRSSIasQuality KEYWORD2
+isIp KEYWORD2
+toStringIp KEYWORD2
+displayTurnOFF KEYWORD2
+displayLoop KEYWORD2
+displayON KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
+OLEDDISPLAY_DEFAULTFONT LITERAL1

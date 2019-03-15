@@ -120,7 +120,8 @@ void WiFiConnectOLED::screenTest()
   int delayMS = 1500;
   clear();
   FlashTurningOffScreen();
-  this->_display->displayOn();
+  digitalWrite(_pwrPin, HIGH);
+  delay(100);
   clear();
   displayManualReset();
   delay(delayMS);
