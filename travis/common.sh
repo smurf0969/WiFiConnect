@@ -114,11 +114,13 @@ function install_ide()
     wget --quiet https://downloads.arduino.cc/arduino-$ARDUINO_IDE_VERSION-linux64.tar.xz
     echo -n "UNPACKING ARDUINO IDE: "
     [ ! -d $ide_path/ ] && mkdir $ide_path
+    echo -e "tar"
     tar xf arduino-$ARDUINO_IDE_VERSION-linux64.tar.xz -C $ide_path/ --strip-components=1
     touch $ide_path/$ARDUINO_IDE_VERSION
     else
     echo -n "CACHED: "
     fi
+    echo -e "Installing Hardware"
     mkdir -p $ide_path/$ARDUINO_IDE_VERSION/hardware
     cd $ide_path/$ARDUINO_IDE_VERSION/hardware
     mkdir esp8266com
