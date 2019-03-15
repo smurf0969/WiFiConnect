@@ -23,7 +23,9 @@ before_install:
    - source <(curl -SLs https://raw.githubusercontent.com/smurf0969/travis-ci-arduino/master/install.sh)
 
 install:
-   - arduino --install-library "ArduinoJson","ESP8266 and ESP32 Oled Driver for SSD1306 display"
+   - mkdir -p $HOME/Arduino/libraries
+   - git clone --branch=Allow-overriding-default-font https://github.com/smurf0969/esp8266-oled-ssd1306
+   - arduino --install-library "ArduinoJson"
 
 script:
    - build_main_platforms
