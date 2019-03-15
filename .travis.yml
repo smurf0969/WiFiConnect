@@ -23,14 +23,14 @@ before_install:
    - source <(curl -SLs https://raw.githubusercontent.com/smurf0969/travis-ci-arduino/master/install.sh)
 
 install:
-   - mkdir -p $HOME/Arduino/libraries
-   - cd $HOME/Arduino/libraries
+   - mkdir -p $HOME/arduino-ide/libraries
+   - cd $HOME/arduino-ide/libraries
    - git clone --branch=Allow-overriding-default-font https://github.com/smurf0969/esp8266-oled-ssd1306
-   - cd $HOME/Arduino/libraries/esp8266-oled-ssd1306
+   - cd $HOME/arduino-ide/libraries/esp8266-oled-ssd1306
    - rm -rf examples
-   - cd $HOME/Arduino/libraries
+   - cd $HOME/arduino-ide/libraries
    - git clone https://github.com/bblanchon/ArduinoJson 
-   - cd $HOME/Arduino/libraries/ArduinoJson
+   - cd $HOME/arduino-ide/libraries/ArduinoJson
    - rm -rf examples
    - cd $TRAVIS_BUILD_DIR   
 
