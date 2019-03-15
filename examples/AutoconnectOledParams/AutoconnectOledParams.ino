@@ -1,7 +1,9 @@
 #include <FS.h> //this needs to be first, or it all crashes and burns...
 #include "WiFiConnectOLED.h" //include before SSD1306.h if using custom fonts
 
+#ifdef ESP32
 #include <SPIFFS.h> // Used to save custom parameters
+#endif
 
 #include <ArduinoJson.h> //https://github.com/bblanchon/ArduinoJson
 

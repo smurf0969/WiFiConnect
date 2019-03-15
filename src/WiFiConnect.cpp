@@ -32,6 +32,9 @@
 #include "WiFiConnect.h"
 
 WiFiConnect::WiFiConnect() {
+  //_params = (WiFiConnectParam**)malloc(WiFiConnect_MAX_PARAMS * sizeof(WiFiConnectParam*));
+  _apName[0]='\0';
+  _apPassword[0]='\0';
 }
 /**************************************************************************/
 /*!
@@ -551,9 +554,9 @@ boolean WiFiConnect::autoConnect() {
     @return Returns wether WiFi is connected
 */
 /**************************************************************************/
-boolean WiFiConnect::autoConnect(char const *ssidName, char const *ssidPassword, wifi_mode_t WiFiMode) {
+boolean WiFiConnect::autoConnect(char const *ssidName, char const *ssidPassword, WiFiMode_t acWiFiMode) {
   DEBUG_WC(F("Auto Connect"));
-  WiFi.mode(WiFiMode);
+  WiFi.mode(acWiFiMode);
   if (WiFi.status() == WL_CONNECTED) {
     DEBUG_WC(F("Already Connected"));
     return true;

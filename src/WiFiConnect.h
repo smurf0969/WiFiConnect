@@ -82,7 +82,7 @@ class WiFiConnect {
     void resetSettings();
 
     boolean autoConnect();
-    boolean autoConnect(const char*  ssidName, const char*  ssidPassword = NULL, wifi_mode_t WiFiMode = WIFI_STA);
+    boolean autoConnect(const char*  ssidName, const char*  ssidPassword = NULL, WiFiMode_t acWiFiMode = WIFI_STA);
 
 
     //sets a custom ip /gateway /subnet configuration
@@ -147,8 +147,8 @@ class WiFiConnect {
     std::unique_ptr<WebServer>        server; ///< Web server for serving access point pages
 #endif
 
-     char _apName[32] = ""; ///< Holder for the access point name
-     char _apPassword[64] = ""; ///< Holder for the access point password
+     char _apName[32] ; ///< Holder for the access point name
+     char _apPassword[64] ; ///< Holder for the access point password
     
     IPAddress     _ap_static_ip; ///< Variable for holding Static IP Address for the access point
     IPAddress     _ap_static_gw; ///< Variable for holding Static Gateway IP Address for the access point
