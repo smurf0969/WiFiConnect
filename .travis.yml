@@ -2,40 +2,42 @@ branches:
     only:
       - master
       - /^v\d+\.\d+(\.\d+)?(-\S*)?$/
-language: c
+language: bash
 sudo: false
 cache:
   directories:
     - ~/arduino_ide
-    - ~/.arduino15/packages/
+  #  - ~/.arduino15/packages/
 git:
   depth: false
   quiet: true
   submodules: false
 env:
   global:
-     - ARDUINO_IDE_VERSION="1.8.7"
      - PRETTYNAME="WiFi Connect"
 # Optional, will default to "$TRAVIS_BUILD_DIR/Doxyfile"
 #    - DOXYFILE: $TRAVIS_BUILD_DIR/Doxyfile
 
+matrix:
+
+  include:
+
+    - env:
+
+      - BUILD_TYPE=build_esp8266
+
+    - env:
+
+      - BUILD_TYPE=build_esp32
+
 before_install:
-   - source <(curl -SLs https://raw.githubusercontent.com/smurf0969/travis-ci-arduino/master/install.sh)
+
 
 install:
-   - mkdir -p $HOME/Arduino/libraries
-   - cd $HOME/Arduino/libraries
-   - git clone --branch=Allow-overriding-default-font https://github.com/smurf0969/esp8266-oled-ssd1306
-   - cd $HOME/Arduino/libraries/esp8266-oled-ssd1306
-   - rm -rf examples
-   - cd $HOME/Arduino/libraries
-   - git clone https://github.com/bblanchon/ArduinoJson 
-   - cd $HOME/Arduino/libraries/ArduinoJson
-   - rm -rf examples
-   - cd $TRAVIS_BUILD_DIR   
+
 
 script:
-   - build_main_platforms
+   - $TRAVIS_BUILD_DIR/travis/common.sh
 
 # Generate and deploy documentation
 after_success:
