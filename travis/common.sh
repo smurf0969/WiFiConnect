@@ -95,6 +95,7 @@ function install_ide()
     wget -O arduino.tar.xz https://www.arduino.cc/download.php?f=/arduino-nightly-linux64.tar.xz
     tar xf arduino.tar.xz
     mv arduino-nightly $ide_path
+    mkdir -p $ide_path/hardware
     cd $ide_path/hardware
     mkdir esp8266com
     cd esp8266com
