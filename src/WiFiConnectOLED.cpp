@@ -149,7 +149,7 @@ void WiFiConnectOLED::screenTest()
 */
 /**************************************************************************/
 void WiFiConnectOLED::FlashTurningOffScreen() {
-  OLEDDISPLAY_COLOR cNow = WHITE;
+  OLEDDISPLAY_COLOR cNow = this->_display->getColor();
   int secs = 0;
   int maxsecs = 5 * 2;
   OLEDDISPLAY_COLOR color = WHITE;
@@ -168,6 +168,8 @@ void WiFiConnectOLED::FlashTurningOffScreen() {
     this->_display->display();
     delay(500);
   }
+  this->_display->setColor(cNow);
+  delay(100);
     digitalWrite(_pwrPin, LOW);
 }
 /**************************************************************************/
