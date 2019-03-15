@@ -92,17 +92,41 @@ function install_ide()
 {
     local ide_path=$1
     local core_path=$2
-    wget -O arduino.tar.xz https://www.arduino.cc/download.php?f=/arduino-nightly-linux64.tar.xz
-    tar xf arduino.tar.xz
-    mv arduino-nightly $ide_path
-    mkdir -p $ide_path/hardware
-    cd $ide_path/hardware
+    # if .travis.yml does not set version
+    if [ -z $ARDUINO_IDE_VERSION ]; then
+    export ARDUINO_IDE_VERSION="1.8.7"
+    echo "NOTE: YOUR .TRAVIS.YML DOES NOT SPECIFY ARDUINO IDE VERSION, USING $ARDUINO_IDE_VERSION"
+    fi
+
+    # if newer version is requested
+    if [ ! -f $ide_path/$ARDUINO_IDE_VERSION ] && [ -f $ide_path/arduino ]; then
+    echo -n "DIFFERENT VERSION OF ARDUINO IDE REQUESTED: "
+    shopt -s extglob
+    cd $ide_path
+    rm -rf *
+    cd $OLDPWD
+    fi
+
+    # if not already cached, download and install arduino IDE
+    echo -n "ARDUINO IDE STATUS: "
+    if [ ! -f $ide_path/arduino ]; then
+    echo -n "DOWNLOADING: "
+    wget --quiet https://downloads.arduino.cc/arduino-$ARDUINO_IDE_VERSION-linux64.tar.xz
+    echo -n "UNPACKING ARDUINO IDE: "
+    [ ! -d $ide_path/ ] && mkdir $ide_path
+    tar xf arduino-$ARDUINO_IDE_VERSION-linux64.tar.xz -C $ide_path/ --strip-components=1
+    touch $ide_path/$ARDUINO_IDE_VERSION
+    else
+    echo -n "CACHED: "
+    fi
+    mkdir -p $ide_path/$ARDUINO_IDE_VERSION/hardware
+    cd $ide_path/$ARDUINO_IDE_VERSION/hardware
     mkdir esp8266com
     cd esp8266com
     git clone https://github.com/esp8266/Arduino esp8266
     pushd esp8266/tools
     python get.py
-    export PATH="$ide_path:$ide_path/hardware/esp8266com/esp8266/tools/xtensa-lx106-elf/bin:$PATH"
+    export PATH="$ide_path:$ide_path/$ARDUINO_IDE_VERSION:$ide_path/$ARDUINO_IDE_VERSION/hardware/esp8266com/esp8266/tools/xtensa-lx106-elf/bin:$PATH"
     popd
     cd ..
     mkdir espressif
@@ -110,7 +134,7 @@ function install_ide()
     git clone https://github.com/espressif/arduino-esp32 esp32
     pushd esp32/tools
     python get.py
-    export PATH="$ide_path:$ide_path/hardware/espressif/esp32/tools/xtensa-esp32-elf/bin:$PATH"
+    export PATH="$ide_path:$ide_path/$ARDUINO_IDE_VERSION:$ide_path/$ARDUINO_IDE_VERSION/hardware/espressif/esp32/tools/xtensa-esp32-elf/bin:$PATH"
     popd
 }
 
