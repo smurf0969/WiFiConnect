@@ -320,17 +320,7 @@ boolean WiFiConnect::startParamsPortal(AP_Continue apcontinue, const char  *apNa
           yield();
         }
         break;
-      case AP_RESTART:
-        displayManualReset();
-        DEBUG_WC(F("AP restart chip"));
-        delay(1000);
-#if defined(ESP8266)
-        ESP.reset();
-#else
-        ESP.restart();
-#endif
-        delay(2000);
-        break;
+       case AP_RESTART:
       case AP_RESET:
         displayManualReset();
         DEBUG_WC(F("AP restart chip"));
@@ -513,6 +503,7 @@ boolean WiFiConnect::startConfigurationPortal(AP_Continue apcontinue, const char
         }
         break;
       case AP_RESTART:
+       case AP_RESET:
         displayManualReset();
         DEBUG_WC(F("AP restart chip"));
         delay(1000);
