@@ -14,7 +14,7 @@
 
    It can also display messages via a OLED screen see WiFiConnectOLED class.
 
-   ![alt text](https://github.com/smurf0969/WiFiConnect/blob/master/extras/screenshots.png "Screenshots")
+   ![alt text](https://github.com/smurf0969/WiFiConnect/raw/master/extras/screenshots.png "Screenshots")
 
    This is a heavily customised version from the origional <a href="https://github.com/tzapu/WiFiManager">WiFiManager</a>
    developed by https://github.com/tzapu .
