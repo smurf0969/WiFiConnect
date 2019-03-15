@@ -104,6 +104,7 @@ function install_ide()
     shopt -s extglob
     cd $ide_path
     rm -rf *
+    if [ $? -ne 0 ]; then echo -e "\xe2\x9c\x96"; else echo -e "\xe2\x9c\x93"; fi
     cd $OLDPWD
     fi
 
@@ -112,17 +113,20 @@ function install_ide()
     if [ ! -f $ide_path/arduino ]; then
     echo -n "DOWNLOADING: "
     wget --quiet https://downloads.arduino.cc/arduino-$ARDUINO_IDE_VERSION-linux64.tar.xz
+    if [ $? -ne 0 ]; then echo -e "\xe2\x9c\x96"; else echo -e "\xe2\x9c\x93"; fi
     echo -n "UNPACKING ARDUINO IDE: "
     [ ! -d $ide_path/ ] && mkdir $ide_path
-    echo -e "tar"
     tar xf arduino-$ARDUINO_IDE_VERSION-linux64.tar.xz -C $ide_path/ --strip-components=1
+    if [ $? -ne 0 ]; then echo -e "\xe2\x9c\x96"; else echo -e "\xe2\x9c\x93"; fi
     touch $ide_path/$ARDUINO_IDE_VERSION
     else
     echo -n "CACHED: "
+    echo -e "\xe2\x9c\x93"
     fi
     echo -e "Installing Hardware"
     mkdir -p $ide_path/hardware
     cd $ide_path/hardware
+    rm -rf esp8266com
     mkdir esp8266com
     cd esp8266com
     git clone https://github.com/esp8266/Arduino esp8266
@@ -131,6 +135,7 @@ function install_ide()
     export PATH="$ide_path:$ide_path/hardware/esp8266com/esp8266/tools/xtensa-lx106-elf/bin:$PATH"
     popd
     cd ..
+    rm -rf espressif
     mkdir espressif
     cd espressif
     git clone https://github.com/espressif/arduino-esp32 esp32
