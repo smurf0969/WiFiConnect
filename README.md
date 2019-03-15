@@ -16,6 +16,9 @@ The origional version is available at [ESP8266_SSD1306](https://github.com/squix
 
 Further documentation can be found at [https://smurf0969.github.io/WiFiConnect/](https://smurf0969.github.io/WiFiConnect/)
 
+# Screenshots
+![alt text](extras/screenshots.png "Screenshots")
+
 # IDE & Library Versions
 ### Arduino IDE
   - Arduino: 1.8.8
