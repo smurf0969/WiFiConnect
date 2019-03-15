@@ -25,10 +25,12 @@ before_install:
 install:
    - mkdir -p $HOME/arduino_ide/libraries
    - cd $HOME/arduino_ide/libraries
+   - rm -rf $HOME/arduino_ide/libraries/esp8266-oled-ssd1306
    - git clone --branch=Allow-overriding-default-font https://github.com/smurf0969/esp8266-oled-ssd1306
    - cd $HOME/arduino_ide/libraries/esp8266-oled-ssd1306
    - rm -rf examples
    - cd $HOME/arduino_ide/libraries
+   - rm -rf $HOME/arduino_ide/libraries/ArduinoJson
    - git clone https://github.com/bblanchon/ArduinoJson 
    - cd $HOME/arduino_ide/libraries/ArduinoJson
    - rm -rf examples
