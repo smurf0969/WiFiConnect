@@ -50,3 +50,8 @@ script:
 after_success:
   # - source <(curl -SLs  https://raw.githubusercontent.com/smurf0969/travis-ci-arduino/master/library_check.sh)
    - source <(curl -SLs  https://raw.githubusercontent.com/smurf0969/.github/master/doxygen/doxy_gen_and_deploy.sh)
+
+notifications:
+  email:
+    on_success: change # default: change
+    on_failure: always # default: always
