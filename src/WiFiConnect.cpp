@@ -127,7 +127,7 @@ void WiFiConnect::setAPModeTimeoutMins(int mins) {
 /**************************************************************************/
 void WiFiConnect::setAPName(const char *apName) {
   if(strlen(apName)>32){return;}
-  if (strlen(apName)==0||(apName == NULL) && (_apName == NULL )) {
+  if (strlen(apName)==0||(apName == NULL)) {
     String ssid = "ESP_" + String(ESP_getChipId());
     //_apName = ssid.c_str();
     strcpy(_apName,ssid.c_str());
@@ -321,6 +321,7 @@ boolean WiFiConnect::startParamsPortal(AP_Continue apcontinue, const char  *apNa
         }
         break;
       case AP_RESTART:
+      [[fallthrough]]
       case AP_RESET:
         displayManualReset();
         DEBUG_WC(F("AP restart chip"));
@@ -565,7 +566,7 @@ boolean WiFiConnect::autoConnect(char const *ssidName, char const *ssidPassword,
   while (c < _retryAttempts) {
     displayConnecting(c + 1, _retryAttempts);
     long ms = millis();
-    if (ssidName == NULL || ssidName == "") {
+    if (ssidName == NULL || strlen(ssidName)==0) {
       WiFi.begin();
     } else {
       DEBUG_WC(F("Connecting with SSID & Password"));
