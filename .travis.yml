@@ -16,7 +16,7 @@ git:
   quiet: true
 env:
   global:
-    # - PRETTYNAME="WiFi Connect"
+     - PRETTYNAME="WiFi Connect"
 # Optional, will default to "$TRAVIS_BUILD_DIR/Doxyfile"
 #    - DOXYFILE: $TRAVIS_BUILD_DIR/Doxyfile
 
@@ -27,10 +27,12 @@ matrix:
     - env:
 
       - BUILD_TYPE=build_esp8266
+      - BUILDDOXYGEN ="false"
 
     - env:
 
       - BUILD_TYPE=build_esp32
+      - BUILDDOXYGEN ="true"
 
 before_install:
 
@@ -44,4 +46,4 @@ script:
 # Generate and deploy documentation
 after_success:
   # - source <(curl -SLs  https://raw.githubusercontent.com/smurf0969/travis-ci-arduino/master/library_check.sh)
-  # - source <(curl -SLs  https://raw.githubusercontent.com/smurf0969/travis-ci-arduino/skip-doxygen-warnings/doxy_gen_and_deploy.sh)
+   - source <(curl -SLs  https://raw.githubusercontent.com/smurf0969/travis-ci-arduino/skip-doxygen-warnings/doxy_gen_and_deploy.sh)
