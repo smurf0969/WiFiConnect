@@ -16,7 +16,7 @@ git:
   quiet: true
 env:
   global:
-     - PRETTYNAME="WiFi Connect"
+    # - PRETTYNAME="WiFi Connect"
 # Optional, will default to "$TRAVIS_BUILD_DIR/Doxyfile"
 #    - DOXYFILE: $TRAVIS_BUILD_DIR/Doxyfile
 
