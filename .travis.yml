@@ -30,11 +30,13 @@ matrix:
     - env:
 
       - BUILD_TYPE=build_esp8266
+      global:
       - BUILDDOXYGEN =false
 
     - env:
 
       - BUILD_TYPE=build_esp32
+      global:
       - BUILDDOXYGEN =true
 
 before_install:
