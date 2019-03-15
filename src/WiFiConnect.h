@@ -104,7 +104,7 @@ class WiFiConnect {
     boolean       captivePortal();
 
     //helpers
-    char* statusToString(int state);
+    const char* statusToString(int state);
     int           getRSSIasQuality(int RSSI);
     boolean       isIp(String str);
     String        toStringIp(IPAddress ip);

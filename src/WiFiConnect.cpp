@@ -652,7 +652,7 @@ void WiFiConnect::resetSettings() {
     @return WiFi state as a string.
 */
 /**************************************************************************/
-char* WiFiConnect::statusToString(int state) {
+const char* WiFiConnect::statusToString(int state) {
   switch (state) {
     case WL_CONNECTED:
       return "WL_CONNECTED";
