@@ -121,14 +121,14 @@ function install_ide()
     echo -n "CACHED: "
     fi
     echo -e "Installing Hardware"
-    mkdir -p $ide_path/$ARDUINO_IDE_VERSION/hardware
-    cd $ide_path/$ARDUINO_IDE_VERSION/hardware
+    mkdir -p $ide_path/hardware
+    cd $ide_path/hardware
     mkdir esp8266com
     cd esp8266com
     git clone https://github.com/esp8266/Arduino esp8266
     pushd esp8266/tools
     python get.py
-    export PATH="$ide_path:$ide_path/$ARDUINO_IDE_VERSION:$ide_path/$ARDUINO_IDE_VERSION/hardware/esp8266com/esp8266/tools/xtensa-lx106-elf/bin:$PATH"
+    export PATH="$ide_path:$ide_path/hardware/esp8266com/esp8266/tools/xtensa-lx106-elf/bin:$PATH"
     popd
     cd ..
     mkdir espressif
@@ -136,7 +136,7 @@ function install_ide()
     git clone https://github.com/espressif/arduino-esp32 esp32
     pushd esp32/tools
     python get.py
-    export PATH="$ide_path:$ide_path/$ARDUINO_IDE_VERSION:$ide_path/$ARDUINO_IDE_VERSION/hardware/espressif/esp32/tools/xtensa-esp32-elf/bin:$PATH"
+    export PATH="$ide_path:$ide_path/hardware/espressif/esp32/tools/xtensa-esp32-elf/bin:$PATH"
     popd
 }
 
