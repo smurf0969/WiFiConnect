@@ -2,6 +2,9 @@ branches:
     only:
       - master
       - /^v\d+\.\d+(\.\d+)?(-\S*)?$/
+      
+os: linux
+dist: trusty
 language: bash
 sudo: false
 cache:
@@ -40,5 +43,5 @@ script:
 
 # Generate and deploy documentation
 after_success:
-  - source <(curl -SLs  https://raw.githubusercontent.com/smurf0969/travis-ci-arduino/master/library_check.sh)
-  - source <(curl -SLs  https://raw.githubusercontent.com/smurf0969/travis-ci-arduino/skip-doxygen-warnings/doxy_gen_and_deploy.sh)
+  # - source <(curl -SLs  https://raw.githubusercontent.com/smurf0969/travis-ci-arduino/master/library_check.sh)
+  # - source <(curl -SLs  https://raw.githubusercontent.com/smurf0969/travis-ci-arduino/skip-doxygen-warnings/doxy_gen_and_deploy.sh)
