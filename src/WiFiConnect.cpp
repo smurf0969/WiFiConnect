@@ -742,7 +742,7 @@ void WiFiConnect::handleParams() {
   page += FPSTR(AP_HTTP_STYLE);
   page += FPSTR(AP_HTTP_HEAD_END);
   page += FPSTR(AP_HTTP_FORM_PARAM_START);
-  char parLength[2];
+  char parLength[4];
   // add the extra parameters to the form
   for (int i = 0; i < _paramsCount; i++) {
     if (_params[i] == NULL) {
@@ -754,7 +754,7 @@ void WiFiConnect::handleParams() {
       pitem.replace("{i}", _params[i]->getID());
       pitem.replace("{n}", _params[i]->getID());
       pitem.replace("{p}", _params[i]->getPlaceholder());
-      snprintf(parLength, 2, "%d", _params[i]->getValueLength());
+      snprintf(parLength, 4, "%d", _params[i]->getValueLength());
       pitem.replace("{l}", parLength);
       pitem.replace("{v}", _params[i]->getValue());
       pitem.replace("{c}", _params[i]->getCustomHTML());
@@ -904,7 +904,7 @@ void WiFiConnect::handleWifi(boolean scan) {
   }
 
   page += FPSTR(AP_HTTP_FORM_START);
-  char parLength[2];
+  char parLength[4];
   // add the extra parameters to the form
   for (int i = 0; i < _paramsCount; i++) {
     if (_params[i] == NULL) {
@@ -916,7 +916,7 @@ void WiFiConnect::handleWifi(boolean scan) {
       pitem.replace("{i}", _params[i]->getID());
       pitem.replace("{n}", _params[i]->getID());
       pitem.replace("{p}", _params[i]->getPlaceholder());
-      snprintf(parLength, 2, "%d", _params[i]->getValueLength());
+      snprintf(parLength, 4, "%d", _params[i]->getValueLength());
       pitem.replace("{l}", parLength);
       pitem.replace("{v}", _params[i]->getValue());
       pitem.replace("{c}", _params[i]->getCustomHTML());
