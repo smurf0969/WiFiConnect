@@ -31,7 +31,9 @@
 #ifndef WIFI_CONNECT_PARAM
 #define WIFI_CONNECT_PARAM
 
+#ifndef WiFiConnect_MAX_PARAMS
 #define WiFiConnect_MAX_PARAMS 10 ///< The maximum size of the param array and how many custom parameters we may have
+#endif
 
 #include <Arduino.h>
 /**************************************************************************/
