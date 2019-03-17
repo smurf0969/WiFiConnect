@@ -14,7 +14,7 @@ The origional version is available at [ESP8266_SSD1306](https://github.com/squix
 
 # Documentation
 
-Further documentation can be found at [https://smurf0969.github.io/WiFiConnect/](https://smurf0969.github.io/WiFiConnect/)
+Further documentation can be found in the [Wiki](https://github.com/smurf0969/WiFiConnect/wiki) and at [https://smurf0969.github.io/WiFiConnect/](https://smurf0969.github.io/WiFiConnect/)
 
 # Screenshots
 ![alt text](extras/screenshots.png "Screenshots")
