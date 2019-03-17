@@ -1,4 +1,4 @@
-# WiFiConnect [![Build Status](https://travis-ci.com/smurf0969/WiFiConnect.svg?branch=master)](https://travis-ci.com/smurf0969/WiFiConnect)
+# WiFiConnect [![Build Status](https://travis-ci.com/smurf0969/WiFiConnect.svg?branch=master)](https://travis-ci.com/smurf0969/WiFiConnect) [![Latest Release](https://img.shields.io/github/release/smurf0969/WiFiConnect.svg)](https://github.com/smurf0969/WiFiConnect/releases/latest)  
 WiFi Manager for ESP8266 and ESP32 chips with support for OLED 128x64 screens
 
 # Overview
