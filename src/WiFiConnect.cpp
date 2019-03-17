@@ -6,6 +6,7 @@
    @section intro_sec Introduction
 
    This is the documentation for WiFiConnect for the Arduino platform <a href="https://github.com/smurf0969/WiFiConnect">https://github.com/smurf0969/WiFiConnect</a>.
+   Further documentation can be found in the [Wiki](https://github.com/smurf0969/WiFiConnect/wiki) or in the project examples folder on GitHub.
 
    It is a WiFi connection manager for use with the popular ESP8266 and ESP32 chips.
 
@@ -22,8 +23,13 @@
    @section dependencies Dependencies
 
    This library depends on <a href="https://github.com/esp8266/Arduino">
-    ESP8266 Arduino Core</a> or <a href="https://github.com/espressif/arduino-esp32">ESP32 Arduino Core</a> depending on what chip you are using being present on your system.
-    Please make sure you have installed the latest version before using this library.
+    ESP8266 Arduino Core</a> or <a href="https://github.com/espressif/arduino-esp32">ESP32 Arduino Core</a> depending on what chip you are using being present on your system.  
+    Please make sure you have installed the latest version before using this library.  
+
+    @section arduino_libraries Arduino Libraries
+
+   - ArduinoJson 6.9.1 [https://github.com/bblanchon/ArduinoJson.git](https://github.com/bblanchon/ArduinoJson.git) or [https://blog.benoitblanchon.fr](https://blog.benoitblanchon.fr)
+   - ESP8266 OLED SSD1306 ([Custom version](https://github.com/smurf0969/esp8266-oled-ssd1306/tree/Allow-overriding-default-font))    
 
    @section author Author
 
