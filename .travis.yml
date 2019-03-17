@@ -20,6 +20,9 @@ git:
 env:
   global:
      - PRETTYNAME="WiFi Connect"
+     - DOXYPRJBRIEF="WiFi connection manager for ESP32 & ESP8266 including OLED support"
+     - DOXYPRJVERSION="Version 1.0"
+     - DOXYPRJLOGO=extras/WiFiConnect.png
 # Optional, will default to "$TRAVIS_BUILD_DIR/Doxyfile"
 #    - DOXYFILE: $TRAVIS_BUILD_DIR/Doxyfile
 
