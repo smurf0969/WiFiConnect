@@ -24,7 +24,7 @@ Further documentation can be found at [https://smurf0969.github.io/WiFiConnect/]
   - Arduino: 1.8.8
 
 ### Hardware Package Core Libraries
-  - esp32 1.0.1
+  - esp32 1.0.1 [https://github.com/espressif/arduino-esp32](https://github.com/espressif/arduino-esp32)
     - FS 1.0
     - SPIFFS 1.0
     - Wire 1.0.1
@@ -32,6 +32,7 @@ Further documentation can be found at [https://smurf0969.github.io/WiFiConnect/]
     - Wire 1.0
 ### Libraries
   - ArduinoJson 6.9.1 [https://github.com/bblanchon/ArduinoJson.git](https://github.com/bblanchon/ArduinoJson.git) or [https://blog.benoitblanchon.fr](https://blog.benoitblanchon.fr)
+  - ESP8266 OLED SSD1306 ([Custom version](https://github.com/smurf0969/esp8266-oled-ssd1306/tree/Allow-overriding-default-font)) 
 
 ## Thanks
 Many thanks to the authors and contibutors for the main libraries that made this project possible or those that made my modifications possible 
